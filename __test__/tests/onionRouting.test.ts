@@ -92,6 +92,7 @@ async function getPrivateKey(nodePort: number) {
   const strPrvKey = await fetch(`http://localhost:${nodePort}/getPrivateKey`)
     .then((res) => res.json())
     .then((json: any) => json.result as string);
+    console.log(strPrvKey);
 
   return strPrvKey;
 }
